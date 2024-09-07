@@ -20,5 +20,8 @@ public class TestLista {
         // prbando metodo recorrido :)
         String recorridoString = listaNumeros.recorrerLista();
         System.out.println(recorridoString);
+        //int elementoaBuscar=7;
+        //boolean encontrado=listaNumeros.seEncuentraElemento(elementoaBuscar);
+        
     }
 }

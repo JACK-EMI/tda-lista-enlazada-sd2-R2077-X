@@ -24,7 +24,15 @@ public class Lista implements ILista {
 
     @Override
     public Nodo buscarElemento(Object elementoaBuscar) {
-        return null;
+        Nodo auxNodo = cabeza;
+        while (auxNodo != null) {
+            if (auxNodo.getDato().equals(elementoaBuscar)) {
+                return auxNodo; // Retorna el nodo encontrado
+            }
+            auxNodo = auxNodo.getEnlace();
+        }
+        return null; // Retorna null si no se encuentra el elemento
+    
     }
 
     @Override
@@ -72,7 +80,19 @@ public class Lista implements ILista {
     // practica en clase
     @Override
     public boolean seEncuentraElemento(Object elementoaEncontrar) {
+        if(estaVacia()){
+            System.out.println("La lista esta vacia, no se puede buscar el elemento");
+           return false;
+        }
+        Nodo auxnodo= cabeza;
+        while (auxnodo!=null) {
+            if(auxnodo.getDato().equals(elementoaEncontrar)){
+                return true;
+            }
+            auxnodo=auxnodo.getEnlace();
+        }
         return false;
+        
     }
 
 }
